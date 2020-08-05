@@ -1,8 +1,6 @@
 import wave
 from PIL import Image
-from textwrap import wrap
 import math
-import struct
 
 def main():
     name = input("Name: ")
@@ -19,8 +17,8 @@ def main():
 
 
 
-    sampleRate = 44400.0 # hertz
-    duration = len(rgbVals)      # seconds
+    sampleRate = 44800.0 # hertz
+    duration = len(rgbVals) # seconds
     frequency = 1040.0    # hertz
 
     wavef = wave.open(f'{name.replace(".","_")}.wav','w')
@@ -33,7 +31,6 @@ def main():
         data = struct.pack('<h', value)
         wavef.writeframesraw( data )
 
-    # wavef.writeframes('')
     wavef.close()
 
 
