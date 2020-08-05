@@ -1,6 +1,7 @@
 import wave
 from PIL import Image
 import math
+import struct
 
 def main():
     name = input("Name: ")
