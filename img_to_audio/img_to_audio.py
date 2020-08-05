@@ -16,11 +16,8 @@ def main():
             avgCol = (rgb_image.getpixel((x,y))[0] + rgb_image.getpixel((x,y))[1] + rgb_image.getpixel((x,y))[2])/3
             rgbVals.append(int(avgCol))
 
-
-
     sampleRate = 44800.0 # hertz
     duration = len(rgbVals) # seconds
-    frequency = 1040.0    # hertz
 
     wavef = wave.open(f'{name.replace(".","_")}.wav','w')
     wavef.setnchannels(1) # mono
